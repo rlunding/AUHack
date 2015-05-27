@@ -1,0 +1,12 @@
+#mapContent {
+    max-width: none;
+}
+
+#googleMapContainer{
+    padding-top: 25px;
+}
+
+#googleMap {
+    width: 100%;
+    height: 400px;
+}
