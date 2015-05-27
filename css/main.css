@@ -43,17 +43,6 @@ html {
     background-color: #3860ee;
 }
 
-.nav-tabs > li, .nav-pills > li {
-    float:none;
-    display:inline-block;
-    *display:inline; /* ie7 fix */
-    zoom:1; /* hasLayout ie7 trigger */
-}
-
-.nav-tabs, .nav-pills {
-    text-align:center;
-}
-
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
 of those sections to manage the look and feel of the site. */
@@ -66,8 +55,8 @@ of those sections to manage the look and feel of the site. */
 }
 
 .about-section {
-    height: 100%;
     padding-top: 150px;
+    padding-bottom: 100px;
     text-align: center;
     background: #eee;
 }
@@ -79,14 +68,13 @@ of those sections to manage the look and feel of the site. */
 }
 
 .sponsors-section {
-    height: 100%;
     padding-top: 150px;
+    padding-bottom: 100px;
     text-align: center;
     background: #eee;
 }
 
 .contact-section {
-    height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
@@ -102,4 +90,41 @@ of those sections to manage the look and feel of the site. */
 
 .footer-section a {
     color: #fff;
+}
+
+
+/**
+  * ABOUT SECTION
+  */
+
+/* tab color */
+.nav-tabs>li>a {
+    background-color: #3860ee;
+    border-color: #3860ee;
+    color:#fff;
+}
+
+/* active tab color */
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #f00000;
+    background-color: #3860ee;
+    border: 1px solid #888888;
+}
+
+/* hover tab color */
+.nav-tabs>li>a:hover {
+    border-color: #000000;
+    background-color: #111111;
+}
+
+/* center tabs */
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
 }
