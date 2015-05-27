@@ -27,6 +27,47 @@ html {
     }
 }
 
+.navbar-custom {
+    background-color:#3860ee;
+    color:#fff;
+    border-radius:0;
+}
+
+/* item color */
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+    background-color:#3860ee;
+}
+
+/* item active color */
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color:#3860ee;
+}
+
+/* item hover color */
+.navbar-nav > li > a:hover {
+    color: #3860ee;
+    background-color: #fff;
+}
+
+/* AUHack - name color */
+.navbar-custom .navbar-brand {
+    color:#fff;
+}
+
+/* Button when collapsed color */
+.navbar-custom .navbar-toggle,
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+    background-color: #fff;
+}
+
+/* Three lines inside button when collapsed */
+.icon-bar {
+    background-color: #3860ee;
+}
+
 .navbar-right img {
     height: 20px;
 }
@@ -132,33 +173,4 @@ of those sections to manage the look and feel of the site. */
 
 .nav-tabs, .nav-pills {
     text-align:center;
-}
-
-
-.navbar-custom {
-    background-color:#3860ee;
-    color:#fff;
-    border-radius:0;
-}
-
-/* item color */
-.navbar-custom .navbar-nav > li > a {
-    color:#fff;
-    background-color:#3860ee;
-}
-
-/* item active color */
-.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-    color: #fff;
-    background-color:#3860ee;
-}
-
-/* item hover color */
-.navbar-nav > li > a:hover {
-    color: #3860ee;
-    background-color: #fff;
-}
-
-.navbar-custom .navbar-brand {
-    color:#eeeeee;
 }
