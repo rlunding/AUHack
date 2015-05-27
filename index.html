@@ -342,43 +342,10 @@
 
 <!-- Google maps -->
 <script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-    var map;
-    var position = new google.maps.LatLng(56.171654, 10.1901015);
-    function initialize() {
-        var mapProp = {
-            center: position,
-            zoom:17,
-            mapTypeId:google.maps.MapTypeId.ROADMAP
-        };
-        map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-        var marker = new google.maps.Marker({
-            position: position,
-            map: map
-        });
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-    google.maps.event.addDomListener(window, "resize", function() {
-        //var center = map.getCenter();
-        google.maps.event.trigger(map, "resize");
-        map.setCenter(position);
-        map.setZoom(17);
-    });
-</script>
+<script src="js/map.js"></script>
 
 <!-- About script -->
-<script>
-    $(function(){
-        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-            // Get the name of active tab
-            var activeTab = $(e.target).text();
-            // Get the name of previous tab
-            var previousTab = $(e.relatedTarget).text();
-            $(".active-tab span").html(activeTab);
-            $(".previous-tab span").html(previousTab);
-        });
-    });
-</script>
+<script src="js/about.js"></script>
 
 </body>
 
