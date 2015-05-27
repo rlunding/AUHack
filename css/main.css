@@ -58,26 +58,30 @@ of those sections to manage the look and feel of the site. */
     padding-top: 150px;
     padding-bottom: 100px;
     text-align: center;
-    background: #eee;
+    background: #3860ee;
+    color: #fff;
 }
 
 .schedule-section {
     padding-top: 150px;
     text-align: center;
     background: #fff;
+    color: #3860ee;
 }
 
 .sponsors-section {
     padding-top: 150px;
     padding-bottom: 100px;
     text-align: center;
-    background: #eee;
+    background: #3860ee;
+    color: #fff;
 }
 
 .contact-section {
     padding-top: 150px;
     text-align: center;
     background: #fff;
+    color: #3860ee;
 }
 
 .footer-section {
@@ -100,21 +104,22 @@ of those sections to manage the look and feel of the site. */
 /* tab color */
 .nav-tabs>li>a {
     background-color: #3860ee;
-    border-color: #3860ee;
+    border-color: #fff;
     color:#fff;
 }
 
 /* active tab color */
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
-    color: #f00000;
-    background-color: #3860ee;
-    border: 1px solid #888888;
+    border-color: #fff;
+    background-color: #fff;
+    color: #3860ee;
 }
 
 /* hover tab color */
 .nav-tabs>li>a:hover {
-    border-color: #000000;
-    background-color: #111111;
+    background-color: #3860ee;
+    border-color: #f00;
+    color:#fff;
 }
 
 /* center tabs */
