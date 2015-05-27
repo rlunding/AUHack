@@ -31,6 +31,18 @@ html {
     height: 20px;
 }
 
+.btn-xl {
+    padding: 20px 40px;
+    border-color: #3860ee;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #3860ee;
+}
+
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
 of those sections to manage the look and feel of the site. */
@@ -50,15 +62,21 @@ of those sections to manage the look and feel of the site. */
 }
 
 .schedule-section {
-    height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
+}
+
+.sponsors-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
 }
 
 .contact-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
-    background: #eee;
+    background: #fff;
 }
