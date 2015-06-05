@@ -18,7 +18,11 @@
 }
 
 .logo-text {
-    margin-top: 50px;
+    margin: 50px 0;
+    text-transform: uppercase;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
     color: #fff;
 }
 /*
