@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AUHack is the...">
+    <meta name="author" content="AUHack">
+
+    <title>Register | AU Hack</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
+    <link href="bootstrap/css/roboto.min.css" rel="stylesheet">
+    <link href="bootstrap/css/material.min.css" rel="stylesheet">
+    <link href="bootstrap/css/ripples.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" >
+    <link href="css/register.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<section class="register-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="img/logo.jpg">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="block-text">
+                    <h1>Register</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="text" class="form-control floating-label" id="firstname" placeholder="First name" required pattern=".{2,}">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control floating-label" id="lastname" placeholder="Last name" required pattern=".{2,}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="text" class="form-control floating-label" id="university" placeholder="University" required pattern=".{2,}">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control floating-label" id="major" placeholder="Major" required pattern=".{2,}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="email" class="form-control floating-label" id="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control floating-label" id="phone" placeholder="Phone number" required pattern="([+][0-9]{2,3})?[0-9]{8}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="text" class="form-control floating-label" id="dietary" placeholder="Dietary restrictions, allergies?">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control floating-label" id="tshirt" placeholder="T-shirt size" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <textarea class="form-control" id="story" placeholder="Write something about yourself. A cool hack you have made or another story"></textarea>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- jQuery -->
+<script src="jquery/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script src="bootstrap/js/ripples.min.js"></script>
+<script src="bootstrap/js/material.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // This command is used to initialize some elements and make them work properly
+        $.material.init();
+    });
+</script>
+
+<!-- Custom JavaScript -->
+<script src="js/main2.js"></script>
+
+</body>
+
+</html>

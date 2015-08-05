@@ -9,7 +9,6 @@ body {
 }
 
 
-
 .btn-xl {
     padding: 20px 40px;
     border-color: #D65B12;
@@ -33,12 +32,56 @@ h1 {
     margin: 0 auto;
 }
 
+.timeline-title {
+    color: #D65B12;
+}
+
+.timeline-heading h4 {
+    margin: 0;
+}
+
+.timeline-heading p {
+    margin: 0;
+}
+
+.timeline-body hr {
+    margin: 5px 0;
+}
+
+.text-muted {
+    color: #d1d1d1;
+}
+
+.text-muted a {
+    color: #d1d1d1;
+    text-decoration: underline;
+}
+
 .faq-section p {
     margin-bottom: 30px;
 }
 
 .faq-section h4 {
     color: #3C5265;
+}
+
+.faq-section a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.sponsors-section a {
+    color: #D65B12;
+    text-decoration: underline;
+}
+
+.sponsors-section img {
+    max-height: 200px;
+    max-width: 400px;
+}
+
+.footer-row a {
+    color: #fff;
 }
 
 .header-section {
@@ -79,13 +122,10 @@ h1 {
     background-color: #364759;
     color: #ffffff;
     text-align: center;
+    margin-top: 50px;
 }
 
 .footer-row {
     margin-top: 50px;
     margin-bottom: 50px;
-}
-
-.footer-row a {
-    color: #fff;
 }
