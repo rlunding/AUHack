@@ -14,9 +14,12 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
-    <link href="bootstrap/css/roboto.min.css" rel="stylesheet">
+    <!--   <link href="bootstrap/css/roboto.min.css" rel="stylesheet">
+
     <link href="bootstrap/css/material.min.css" rel="stylesheet">
-    <link href="bootstrap/css/ripples.min.css" rel="stylesheet">
+       <link href="bootstrap/css/material-fullpalette.min.css" rel="stylesheet">
+       <link href="bootstrap/css/ripples.min.css" rel="stylesheet">
+   -->
 
     <!-- Custom CSS -->
     <link href="css/font-awesome.min.css" rel="stylesheet" >
@@ -44,9 +47,12 @@
             <div class="col-sm-12">
                 <div class="block-text">
                     <h1>Register</h1>
+                    <p>We need some information about you. We will not sell this information or give it to any third party. E.g.: we ask for your phone number should any emergency happen. We are not going to call you day and night. Promise :)</p>
                 </div>
             </div>
         </div>
+
+        <!--
         <div class="row">
             <div class="col-sm-6">
                 <input type="text" class="form-control floating-label" id="firstname" placeholder="First name" required pattern=".{2,}">
@@ -71,6 +77,8 @@
                 <input type="text" class="form-control floating-label" id="phone" placeholder="Phone number" required pattern="([+][0-9]{2,3})?[0-9]{8}">
             </div>
         </div>
+
+
         <div class="row">
             <div class="col-sm-6">
                 <input type="text" class="form-control floating-label" id="dietary" placeholder="Dietary restrictions, allergies?">
@@ -85,6 +93,147 @@
             </div>
         </div>
 
+
+
+        <div class="row">
+            <div class="col-sm-12" style="text-align: right">
+                <button onclick="" class="btn btn-large btn-raised btn-material-orange-900">Submit</button>
+            </div>
+        </div>-->
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Required information</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label" for="firstname">First name</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                        <input type="text" class="form-control" id="firstname" placeholder="John" required pattern=".{2,}">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label" for="lastname">Last name</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                        <input type="text" class="form-control" id="lastname" placeholder="Doe" required pattern=".{2,}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label" for="email">Email</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                        <input type="text" class="form-control" id="email" placeholder="foo@bar.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label" for="phonenumber">Phone Number</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                        <input type="text" class="form-control" id="phonenumber" placeholder="+4512345678" required pattern="[+][0-9]{2,3}[0-9]{8}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label" for="university">University</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-university"></i></div>
+                        <input type="text" class="form-control" id="university" placeholder="Hogwards" required pattern=".{2,}">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label" for="major">Major</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-graduation-cap"></i></div>
+                        <input type="text" class="form-control" id="major" placeholder="Magician" required pattern=".{2,}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="story">Story</label>
+                    <textarea class="form-control" rows="5" id="story" placeholder="Write something about yourself. A cool hack you have made or another story." required></textarea>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Optional information</h2>
+                <p>This information is only used for statistical purposes.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label" for="dietary">Dietary Requirements</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-cutlery"></i></div>
+                        <input type="text" class="form-control" id="dietary" placeholder="E.g. Vegetarian, allergic to ...">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label" for="hackathons">#Hackathons</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-graduation-cap"></i></div>
+                        <input type="number" class="form-control" id="hackathons" placeholder="#Hackathons you have participated in">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label" for="year">Year of study</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-hourglass-half"></i></div>
+                        <input type="number" class="form-control" id="year" placeholder="1, 2, 3, ...">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label" for="gender">Gender</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-transgender"></i></div>
+                        <select class="form-control" id="gender">
+                            <option></option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12" style="text-align: center; margin-top: 50px; margin-bottom: 100px;">
+                    <a href="" class="btn btn-xl">Submit</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -95,6 +244,7 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
+<!--
 <script src="bootstrap/js/ripples.min.js"></script>
 <script src="bootstrap/js/material.min.js"></script>
 <script>
@@ -103,6 +253,7 @@
         $.material.init();
     });
 </script>
+-->
 
 <!-- Custom JavaScript -->
 <script src="js/main2.js"></script>
