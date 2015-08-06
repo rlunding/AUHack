@@ -13,14 +13,6 @@
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
-    <!--   <link href="bootstrap/css/roboto.min.css" rel="stylesheet">
-
-    <link href="bootstrap/css/material.min.css" rel="stylesheet">
-       <link href="bootstrap/css/material-fullpalette.min.css" rel="stylesheet">
-       <link href="bootstrap/css/ripples.min.css" rel="stylesheet">
-   -->
-
     <!-- Custom CSS -->
     <link href="css/font-awesome.min.css" rel="stylesheet" >
     <link href="css/register.css" rel="stylesheet">
@@ -36,13 +28,19 @@
 
 <body>
 
-<section class="register-section">
+
+<section class="header-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <img src="img/logo.jpg">
+            <div class="col-sm-12">
+                <a href="index.html"><img src="img/logo.jpg"></a>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="register-section">
+    <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <div class="block-text">
@@ -52,54 +50,6 @@
             </div>
         </div>
 
-        <!--
-        <div class="row">
-            <div class="col-sm-6">
-                <input type="text" class="form-control floating-label" id="firstname" placeholder="First name" required pattern=".{2,}">
-            </div>
-            <div class="col-sm-6">
-                <input type="text" class="form-control floating-label" id="lastname" placeholder="Last name" required pattern=".{2,}">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <input type="text" class="form-control floating-label" id="university" placeholder="University" required pattern=".{2,}">
-            </div>
-            <div class="col-sm-6">
-                <input type="text" class="form-control floating-label" id="major" placeholder="Major" required pattern=".{2,}">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <input type="email" class="form-control floating-label" id="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-            </div>
-            <div class="col-sm-6">
-                <input type="text" class="form-control floating-label" id="phone" placeholder="Phone number" required pattern="([+][0-9]{2,3})?[0-9]{8}">
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-sm-6">
-                <input type="text" class="form-control floating-label" id="dietary" placeholder="Dietary restrictions, allergies?">
-            </div>
-            <div class="col-sm-6">
-                <input type="text" class="form-control floating-label" id="tshirt" placeholder="T-shirt size" required>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <textarea class="form-control" id="story" placeholder="Write something about yourself. A cool hack you have made or another story"></textarea>
-            </div>
-        </div>
-
-
-
-        <div class="row">
-            <div class="col-sm-12" style="text-align: right">
-                <button onclick="" class="btn btn-large btn-raised btn-material-orange-900">Submit</button>
-            </div>
-        </div>-->
         <div class="row">
             <div class="col-sm-12">
                 <h2>Required information</h2>
@@ -132,16 +82,16 @@
                     <label class="control-label" for="email">Email</label>
                     <div class="input-group">
                         <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-                        <input type="text" class="form-control" id="email" placeholder="foo@bar.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <input type="text" class="form-control" id="email" placeholder="foo@bar.com" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                     </div>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label class="control-label" for="phonenumber">Phone Number</label>
+                    <label class="control-label" for="phonenumber">Phone Number + country code</label>
                     <div class="input-group">
                         <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                        <input type="text" class="form-control" id="phonenumber" placeholder="+4512345678" required pattern="[+][0-9]{2,3}[0-9]{8}">
+                        <input type="text" class="form-control" id="phonenumber" placeholder="+4512345678" required pattern="^[+][0-9]{2,3}[0-9]{8}$">
                     </div>
                 </div>
             </div>
@@ -171,7 +121,7 @@
             <div class="col-sm-12">
                 <div class="form-group">
                     <label for="story">Story</label>
-                    <textarea class="form-control" rows="5" id="story" placeholder="Write something about yourself. A cool hack you have made or another story." required></textarea>
+                    <textarea class="form-control" rows="5" id="story" placeholder="Write something about yourself. A cool hack you have made or another story." required pattern=".{2,}"></textarea>
                 </div>
             </div>
         </div>
@@ -189,7 +139,7 @@
                     <label class="control-label" for="dietary">Dietary Requirements</label>
                     <div class="input-group">
                         <div class="input-group-addon"><i class="fa fa-cutlery"></i></div>
-                        <input type="text" class="form-control" id="dietary" placeholder="E.g. Vegetarian, allergic to ...">
+                        <input type="text" class="form-control" id="dietary" placeholder="E.g. Vegetarian, allergic to ..., none">
                     </div>
                 </div>
             </div>
@@ -198,7 +148,7 @@
                     <label class="control-label" for="hackathons">#Hackathons</label>
                     <div class="input-group">
                         <div class="input-group-addon"><i class="fa fa-graduation-cap"></i></div>
-                        <input type="number" class="form-control" id="hackathons" placeholder="#Hackathons you have participated in">
+                        <input type="number" class="form-control" id="hackathons" placeholder="#Hackathons you have participated in" pattern="[0-9]{1,2}$">
                     </div>
                 </div>
             </div>
@@ -209,7 +159,7 @@
                     <label class="control-label" for="year">Year of study</label>
                     <div class="input-group">
                         <div class="input-group-addon"><i class="fa fa-hourglass-half"></i></div>
-                        <input type="number" class="form-control" id="year" placeholder="1, 2, 3, ...">
+                        <input type="number" class="form-control" id="year" placeholder="1, 2, 3, ..." pattern="^[1-9]{1}[0-9]?$">
                     </div>
                 </div>
             </div>
@@ -228,12 +178,28 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12" style="text-align: center; margin-top: 50px; margin-bottom: 100px;">
-                    <a href="" class="btn btn-xl">Submit</a>
+                <div class="col-sm-12" style="text-align: center; margin-top: 35px;">
+                    <a id="submit-button" class="btn btn-xl">Submit</a>
                 </div>
             </div>
+            <div class="row" id="optional-unfilled-text" hidden>
+                <div class="col-sm-12">
+                    <p>Sure you don't want to fill out the optional information? :)<br>
+                        Otherwise press SUBMIT.</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 100px"></div>
         </div>
+    </div>
+</section>
 
+<section class="response-section" hidden>
+    <div class="container">
+        <div class="col-sm-12">
+            <div id="response">
+
+            </div>
+        </div>
     </div>
 </section>
 
@@ -244,19 +210,8 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
-<!--
-<script src="bootstrap/js/ripples.min.js"></script>
-<script src="bootstrap/js/material.min.js"></script>
-<script>
-    $(document).ready(function() {
-        // This command is used to initialize some elements and make them work properly
-        $.material.init();
-    });
-</script>
--->
-
 <!-- Custom JavaScript -->
-<script src="js/main.js"></script>
+<script src="js/register.js"></script>
 
 </body>
 

@@ -19,16 +19,6 @@ $( document ).ready(function() {
     checkWidth();
     $(window).resize(checkWidth);
 
-    /*$(".expand-icon").click(function(){
-        var element = $(this).parent().next();
-        if (element.is(":visible")){
-            element.slideUp(500);
-        } else {
-            $(".expand-icon-selected").slideUp(500).removeClass("expand-icon-selected");
-            element.slideDown(500);
-            element.addClass("expand-icon-selected");
-        }
-    });*/
     $(".faq-section h4").click(function(){
         if (smallWindow) {
             var element = $(this).next();

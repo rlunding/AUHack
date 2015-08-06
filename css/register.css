@@ -10,12 +10,6 @@ body {
     background-color: #fff;
 }
 
-/*
-.form-control {
-    margin: 20px 5px;
-}
-*/
-
 .btn-xl {
     padding: 20px 40px;
     border-color: #D65B12;
@@ -26,4 +20,11 @@ body {
     font-weight: 700;
     color: #fff;
     background-color: #D65B12;
+}
+
+
+
+#optional-unfilled-text {
+    margin-bottom: 100px;
+    text-align: center;
 }
