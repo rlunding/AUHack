@@ -22,7 +22,9 @@ body {
     background-color: #D65B12;
 }
 
-
+.header-section img {
+    max-width: 90%;
+}
 
 #optional-unfilled-text {
     margin-bottom: 100px;

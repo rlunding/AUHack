@@ -21,9 +21,25 @@ body {
     background-color: #D65B12;
 }
 
+@media only screen and (max-device-width: 480px) {
+    .btn-xl {
+        padding: 10px 20px;
+    }
+    .header-section h1 {
+        margin-top: 0;
+    }
+    .header-section a {
+        margin-bottom: 30px;
+    }
+}
+
 h1 {
     margin: 50px 0;
     text-transform: uppercase;
+}
+
+.header-section img {
+    max-width: 90%;
 }
 
 .block-text {
@@ -78,8 +94,10 @@ h1 {
 }
 
 .sponsors-section img {
+    /*max-height: 200px;
+    max-width: 400px;*/
     max-height: 200px;
-    max-width: 400px;
+    max-width: 80%;
 }
 
 .footer-row a {
@@ -90,7 +108,7 @@ h1 {
     text-align: center;
     color: #D65B12;
     background: #fff;
-    height: 95%;
+    min-height: 95%;
 }
 
 .what-section {

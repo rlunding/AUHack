@@ -27,8 +27,6 @@
 </head>
 
 <body>
-
-
 <section class="header-section">
     <div class="container">
         <div class="row">
@@ -58,19 +56,19 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label class="control-label" for="firstname">First name</label>
+                    <label class="control-label" for="fullname">Full name</label>
                     <div class="input-group">
                         <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                        <input type="text" class="form-control" id="firstname" placeholder="John" required pattern=".{2,}">
+                        <input type="text" class="form-control" id="fullname" placeholder="John Doe" required pattern=".{2,}">
                     </div>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label class="control-label" for="lastname">Last name</label>
+                    <label class="control-label" for="age">Year of birth</label>
                     <div class="input-group">
-                        <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                        <input type="text" class="form-control" id="lastname" placeholder="Doe" required pattern=".{2,}">
+                        <div class="input-group-addon"><i class="fa fa-birthday-cake"></i></div>
+                        <input type="number" class="form-control" id="age" placeholder="1992" required pattern="^[1][0-9]{3}$">
                     </div>
                 </div>
             </div>
@@ -121,7 +119,8 @@
             <div class="col-sm-12">
                 <div class="form-group">
                     <label for="story">Story</label>
-                    <textarea class="form-control" rows="5" id="story" placeholder="Write something about yourself. A cool hack you have made or another story." required pattern=".{2,}"></textarea>
+                    <textarea class="form-control" rows="4" id="story" placeholder="Write something about yourself. A cool hack you have made or another story." required pattern=".{2,}" maxlength="500"></textarea>
+                    <div id="story-feedback"></div>
                 </div>
             </div>
         </div>
@@ -130,7 +129,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <h2>Optional information</h2>
-                <p>This information is only used for statistical purposes.</p>
+                <p>This information is only used for statistical purposes... And for your own convenience</p>
             </div>
         </div>
         <div class="row">
@@ -139,7 +138,7 @@
                     <label class="control-label" for="dietary">Dietary Requirements</label>
                     <div class="input-group">
                         <div class="input-group-addon"><i class="fa fa-cutlery"></i></div>
-                        <input type="text" class="form-control" id="dietary" placeholder="E.g. Vegetarian, allergic to ..., none">
+                        <input type="text" class="form-control" id="dietary" placeholder="None, Vegetarian, Allergic to ...">
                     </div>
                 </div>
             </div>
@@ -156,10 +155,18 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label class="control-label" for="year">Year of study</label>
+                    <label class="control-label" for="graduation">Graduation Year</label>
                     <div class="input-group">
                         <div class="input-group-addon"><i class="fa fa-hourglass-half"></i></div>
-                        <input type="number" class="form-control" id="year" placeholder="1, 2, 3, ..." pattern="^[1-9]{1}[0-9]?$">
+                        <select class="form-control" id="graduation">
+                            <option></option>
+                            <option>2015</option>
+                            <option>2016</option>
+                            <option>2017</option>
+                            <option>2018</option>
+                            <option>2019</option>
+                            <option>2020</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -177,19 +184,76 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-12" style="text-align: center; margin-top: 35px;">
-                    <a id="submit-button" class="btn btn-xl">Submit</a>
-                </div>
-            </div>
-            <div class="row" id="optional-unfilled-text" hidden>
-                <div class="col-sm-12">
-                    <p>Sure you don't want to fill out the optional information? :)<br>
-                        Otherwise press SUBMIT.</p>
-                </div>
-            </div>
-            <div style="margin-bottom: 100px"></div>
         </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label" for="country">Country</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-globe"></i></div>
+                        <input type="text" class="form-control" id="country" placeholder="Denmark">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label" for="shirt">T-shirt size</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-odnoklassniki"></i></div>
+                        <select class="form-control" id="shirt">
+                            <option></option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label" for="linkedin">Linkedin profile</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-linkedin"></i></div>
+                        <input type="text" class="form-control" id="linkedin" placeholder="https://linkedin.com/...">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label" for="github">Github profile</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-github"></i></div>
+                        <input type="text" class="form-control" id="github" placeholder="https://github.com/...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="story">Free text</label>
+                    <textarea class="form-control" rows="2" id="freetext" placeholder="Anything else we need to know?"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12" style="text-align: center; margin-top: 35px;">
+                <p>By pressing submit I agree that the above information is correct and I have read and accept the <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">Code of Conduct</a>.</p>
+                <a id="submit-button" class="btn btn-xl">Submit</a>
+            </div>
+        </div>
+        <div class="row" id="optional-unfilled-text" hidden>
+            <div class="col-sm-12">
+                <p>Sure you don't want to fill out the optional information? :)<br>
+                    Otherwise press SUBMIT.</p>
+            </div>
+        </div>
+        <div style="margin-bottom: 100px"></div>
     </div>
 </section>
 

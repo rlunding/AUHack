@@ -7,6 +7,9 @@
 
 require_once('config.php');
 require_once('translation/en.php');
+require_once('DB_Functions.php');
+
+$db = new DB_Functions();
 
 if (isset($_POST["tag"]) && $_POST["tag"] != ""){
     $tag = $_POST["tag"];
@@ -15,8 +18,8 @@ if (isset($_POST["tag"]) && $_POST["tag"] != ""){
 
     switch($tag){
         case "submituser":
-            //TODO: do something; validate and save in DB
-            echo json_encode($_POST["data"]);
+            $db->registerNewParticipant($_POST["data"], $response);
+            echo "Input data: <br>" . json_encode($_POST["data"]) . "<br>";
             break;
     }
     echo json_encode($response);
