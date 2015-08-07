@@ -84,24 +84,6 @@ function validateUserData(){
 }
 
 function submitUserData(){
-    /*var dataJSON = {
-        "fullName": fullName.val(),
-        "age": age.val(),
-        "email": email.val(),
-        "phone": phoneNumber.val(),
-        "university": university.val(),
-        "major": major.val(),
-        "story": story.val(),
-        "dietary": dietary.val(),
-        "hackathons": hackathons.val(),
-        "graduationYear": graduationYear.val(),
-        "gender": gender.val(),
-        "country": country.val(),
-        "shirt": shirt.val(),
-        "linkedin": linkedin.val(),
-        "github": github.val(),
-        "freetext": freeText.val()
-    };*/
     var dataJSON = new Object();
     dataJSON.fullName = fullName.val();
     dataJSON.age = age.val();
@@ -121,17 +103,22 @@ function submitUserData(){
     dataJSON.freetext = freeText.val();
     var jsonString = JSON.stringify(dataJSON);
 
+    $(".submit-section").slideUp(1000);
+    $(".optional-section").slideUp(1000);
+    $(".required-section").slideUp(1000);
+    $(".about-section").slideUp(1000);
+    $(".response-section").slideDown(1000);
+    scrollToTop();
+
     $.post("php/api.php", {
         tag: "submituser",
         data: jsonString
     }, function(data) {
-        $(".register-section").slideUp(1000);
-        $(".response-section").slideDown(1000);
         var response = JSON.parse(data);
         if (response["error"]){
-            $("#response").html("Error: <br>" + response["error_msg"]);
+            $("#response").html("<h1>Error</h1><p>" + response["error_msg"] + "</p>");
         } else {
-            $("#response").html("Success: <br>" + response["msg"]);
+            $("#response").html("<h1>Success</h1><p>" + response["msg"] + "</p>");
         }
     });
 
@@ -161,4 +148,8 @@ function validateRequiredInput(element){
 
 function validatePattern(element){
     return element.val().match(element.prop('pattern'));
+}
+
+function scrollToTop(){
+    $("html, body").animate({ scrollTop: 0 }, "slow");
 }

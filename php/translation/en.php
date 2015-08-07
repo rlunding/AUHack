@@ -35,6 +35,6 @@ define("MESSAGE_EMAIL_TOO_LONG", "Email cannot be longer than 64 characters");
 define("MESSAGE_LINK_PARAMETER_EMPTY", "Empty link parameter data.");
 define("MESSAGE_VERIFICATION_MAIL_ERROR", "Sorry, we could not send you an verification mail. You have NOT been registered. Please try one more time. Otherwise send an email to: <a href='mailto:contact@auhack.org?subject=AUHack'>contact@auhack.org</a>");
 define("MESSAGE_VERIFICATION_MAIL_NOT_SENT", "Verification Mail NOT successfully sent! Error: ");
-define("MESSAGE_VERIFICATION_MAIL_SENT", "You have been registered successfully and we have sent you an email. Please send us an email, if you find out you won't be able to join us.<br> If you have any questions fill free to contact us on: <a href='mailto:contact@auhack.org?subject=AUHack'>contact@auhack.org</a>");
+define("MESSAGE_VERIFICATION_MAIL_SENT", "You have been registered successfully and we have sent you an email.<br>Please send us an email, if you find out you won't be able to join us.<br>If you have any questions fill free to contact us on: <a href='mailto:contact@auhack.org?subject=AUHack'>contact@auhack.org</a>.");
 
 ?>

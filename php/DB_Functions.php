@@ -132,7 +132,7 @@ class DB_Functions {
 
                     if ($query_new_user_insert && $participant_id > 0){
                         //Send a verification email
-                        if($this->sendConfirmationEmail($fullname, $email, $response)){ //TODO: remove when testing
+                        if($this->sendConfirmationEmail($fullname, $email, $response)){ //TODO: remove when testing //
                             //when mail has been send successfully
                             $response["msg"] = MESSAGE_VERIFICATION_MAIL_SENT;
                             $response["error"] = FALSE;
@@ -193,7 +193,7 @@ class DB_Functions {
         $mail->Subject = EMAIL_VERIFICATION_SUBJECT;
 
         //TODO: set email body
-        $mail->Body = "Hello " . $name ." \n You are now signed up for AUHack. You will receive a confirmation email within the next weeks. \n\nBest regards \nThe AUHack Team";
+        $mail->Body = "Hello " . $name ." \nYou are now signed up for AUHack. You will receive a confirmation email within the next weeks. \n \nBest regards \nThe AUHack Team";
 
         if(!$mail->Send()) {
             $response["error_msg"] = MESSAGE_VERIFICATION_MAIL_NOT_SENT . $mail->ErrorInfo;
