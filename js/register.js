@@ -127,7 +127,12 @@ function submitUserData(){
     }, function(data) {
         $(".register-section").slideUp(1000);
         $(".response-section").slideDown(1000);
-        $("#response").html(data);
+        var response = JSON.parse(data);
+        if (response["error"]){
+            $("#response").html("Error: <br>" + response["error_msg"]);
+        } else {
+            $("#response").html("Success: <br>" + response["msg"]);
+        }
     });
 
 }

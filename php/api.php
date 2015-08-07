@@ -19,7 +19,28 @@ if (isset($_POST["tag"]) && $_POST["tag"] != ""){
     switch($tag){
         case "submituser":
             $db->registerNewParticipant($_POST["data"], $response);
-            echo "Input data: <br>" . json_encode($_POST["data"]) . "<br>";
+            break;
+        default:
+            $response["error_msg"] = MESSAGE_UNKNOWN_TAG;
+            break;
+    }
+    echo json_encode($response);
+
+}
+/**
+ * Check for GET request
+ */
+else if($_GET['tag'] && $_GET['tag'] != ''){
+    $tag = $_GET['tag'];
+    //Response array
+    $response = array("tag" => $tag, "error" => TRUE);
+
+    //check for tag type
+    switch($tag){
+        case "get_emails":
+            break;
+        default:
+            $response["error_msg"] = MESSAGE_UNKNOWN_TAG;
             break;
     }
     echo json_encode($response);
