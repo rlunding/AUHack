@@ -48,6 +48,10 @@ h1 {
     margin: 0 auto;
 }
 
+.table {
+    text-align: left;
+}
+
 .timeline-title {
     color: #D65B12;
 }
@@ -98,11 +102,26 @@ h1 {
     max-width: 400px;*/
     max-height: 200px;
     max-width: 80%;
+    margin: 25px;
+}
+
+a.sponsor-text-logo {
+    color: #000000;
+    font-size: 7.0vw;
+    text-decoration: none;
+}
+
+.footer-row {
+    font-size: 20px;
 }
 
 .footer-row a {
     color: #fff;
 }
+
+
+
+
 
 .header-section {
     text-align: center;
@@ -122,6 +141,7 @@ h1 {
     background-color: #3C5265;
     color: #ffffff;
     text-align: center;
+    padding-bottom: 50px;
 }
 
 .faq-section {

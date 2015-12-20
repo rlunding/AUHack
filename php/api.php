@@ -30,7 +30,7 @@ if (isset($_POST["tag"]) && $_POST["tag"] != ""){
 /**
  * Check for GET request
  */
-else if($_GET['tag'] && $_GET['tag'] != ''){
+else if(isset($_GET['tag']) && $_GET['tag'] != ''){
     $tag = $_GET['tag'];
     //Response array
     $response = array("tag" => $tag, "error" => TRUE);
