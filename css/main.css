@@ -171,3 +171,43 @@ a.sponsor-text-logo {
     margin-top: 100px;
     margin-bottom: 50px;
 }
+
+
+.hardware-header-section {
+    text-align: center;
+    color: #D65B12;
+    background: #fff;
+    min-height: 25%;
+    margin-bottom: 50px;
+}
+
+.hardware-header-section img {
+    max-width: 50%;
+}
+
+.hardware-main-section {
+    background-color: #3C5265;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.hardware-list-section {
+    background-color: #D65B12;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.hardware-list-section .list-group-item{
+    text-align: left;
+    color: #D65B12;
+}
+
+.hardware-contact-section {
+    background-color: #364759;
+    color: #ffffff;
+    text-align: center;
+}
+
+
